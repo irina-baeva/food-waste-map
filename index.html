@@ -5,24 +5,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Corona virus map</title>
-
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" />
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" />
+  <link href="https://api.mapbox.com/mapbox-assembly/v0.23.2/assembly.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <!-- <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.0/mapbox-gl.css" rel="stylesheet" /> -->
   <style>
     body {
       margin: 0;
+      padding: 0;
     }
 
     #map {
       width: 100vw;
       height: 100vh;
     }
+
+    #sidebar-overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 20%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .total {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .table {
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      border-collapse: collapse;
+    }
   </style>
 </head>
 
 <body>
   <div id="map"></div>
+  <div id="sidebar-overlay"></div>
 
-  <script type="module" src="app.js"></script>
+  <script src="foodData.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
