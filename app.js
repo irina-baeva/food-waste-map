@@ -1,4 +1,6 @@
-mapboxgl.accessToken = MAPBOX_KEY;
+//temporary key (would be changed soon)
+mapboxgl.accessToken =
+  "pk.eyJ1IjoiaXJzaWRldiIsImEiOiJjazk2eXFtam0wamN0M2VtcHVtY2FjNDg0In0.3XwpBGvYodgShxGvYIsVKw";
 
 var map = new mapboxgl.Map({
   container: "map",
@@ -24,6 +26,14 @@ fetch("/data_countries.json")
   });
   */
 const colors = [
+  "#003f5c",
+  "#2f4b7c",
+  "#665191",
+  "#a05195",
+  "#d45087",
+  "#f95d6a",
+  " #ff7c43",
+  "#ffa600",
   "#8dd3c7",
   "#ffffb3",
   "#bebada",
@@ -32,12 +42,12 @@ const colors = [
   "#fdb462",
   "#b3de69",
   "#fccde5",
-  "#d9d9d9",
-  "#bc80bd",
-  "#ccebc5",
-  "#ffed6f",
-  "#a09fe6",
-  "#edffc9",
+  // "#d9d9d9",
+  // "#bc80bd",
+  // "#ccebc5",
+  // "#ffed6f",
+  // "#a09fe6",
+  // "#edffc9",
 ];
 const colorScale = d3
   .scaleOrdinal()
