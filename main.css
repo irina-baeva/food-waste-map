@@ -7,6 +7,28 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.header-wrap {
+  position: absolute;
+  top: 0;
+  display: flex;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  left: 25px;
+  right: 25px;
+}
+header {
+  background: #2a2a2a;
+  color: white;
+  padding: 1em 1em 1em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 120%;
+  align-items: center;
+  display: flex;
+}
+header img {
+  width: 40px;
+}
 
 #sidebar-overlay {
   background-color: #2a2a2a;
