@@ -1,4 +1,4 @@
-mapboxgl.accessToken = process.env.MAPBOX_KEY;
+mapboxgl.accessToken = MAPBOX_KEY;
 
 var map = new mapboxgl.Map({
   container: "map",
