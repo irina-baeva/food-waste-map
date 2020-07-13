@@ -9,7 +9,7 @@ body {
 }
 
 #sidebar-overlay {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #2a2a2a;
   width: 20%;
   position: absolute;
   top: 0;
