@@ -9,22 +9,6 @@ var map = new mapboxgl.Map({
   center: [0, 20],
 });
 
-/* simple displaying of markers
-fetch("/data_countries.json")
-  .then((response) => response.json())
-  .then((data) => {
-    // console.log(data.features);
-    data.features.forEach((country) => {
-      let coordinate = country.geometry.coordinates;
-      new mapboxgl.Marker({
-        color: "red",
-      })
-        .setLngLat([coordinate[0], coordinate[1]])
-        .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>"))
-        .addTo(map);
-    });
-  });
-  */
 const colors = [
   "#003f5c",
   "#2f4b7c",

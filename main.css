@@ -19,8 +19,9 @@ body {
 }
 header {
   background: #2a2a2a;
+  opacity: 0.8;
   color: white;
-  padding: 1em 1em 1em;
+  padding: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 120%;
   align-items: center;
