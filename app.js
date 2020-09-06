@@ -10,28 +10,18 @@ var map = new mapboxgl.Map({
 });
 
 const colors = [
-  "#003f5c",
-  "#2f4b7c",
-  "#665191",
-  "#a05195",
-  "#d45087",
-  "#f95d6a",
-  " #ff7c43",
-  "#ffa600",
-  "#8dd3c7",
-  "#ffffb3",
-  "#bebada",
-  "#fb8072",
-  "#80b1d3",
-  "#fdb462",
-  "#b3de69",
-  "#fccde5",
-  // "#d9d9d9",
-  // "#bc80bd",
-  // "#ccebc5",
-  // "#ffed6f",
-  // "#a09fe6",
-  // "#edffc9",
+  "#f8edeb", //sugar
+  "#54478c", //veg
+  "#f29e4c", //potato
+  "#905425", //casava
+  "#f1c453", //maize
+  "#ffb5a7", //rice
+  "#a37a00", //wheat
+  "#2accbb", //fruits
+  "#fcd5ce", //milk
+  "#f4ff5b", //bananas
+  "#cb4143", //tomatoes
+  "#568d00", //568d00
 ];
 const colorScale = d3
   .scaleOrdinal()
@@ -105,20 +95,20 @@ map.on("load", () => {
     paint: {
       "circle-color": [
         "case",
-        vegatables,
-        colorScale("vegatables"),
         sugar,
         colorScale("sugar"),
+        vegatables,
+        colorScale("vegatables"),
+        potato,
+        colorScale("potato"),
         cassava,
         colorScale("cassava"),
         maize,
         colorScale("maize"),
-        wheat,
-        colorScale("wheat"),
-        potato,
-        colorScale("potato"),
         rice,
         colorScale("rice"),
+        wheat,
+        colorScale("wheat"),
         fruits,
         colorScale("fruits"),
         milk,
@@ -128,9 +118,8 @@ map.on("load", () => {
         tomatoes,
         colorScale("tomatoes"),
         others,
-
         colorScale("others"),
-        "#ffed6f",
+        "#568d00",
       ],
       "circle-radius": 5,
     },
@@ -189,8 +178,8 @@ map.on("load", () => {
             f.properties.potato +
             f.properties.cassava +
             f.properties.maize +
-            f.properties.wheat +
             f.properties.rice +
+            f.properties.wheat +
             f.properties.fruits +
             f.properties.milk +
             f.properties.bananas +
@@ -247,9 +236,9 @@ map.on("load", () => {
       { type: "vegatables", count: props.vegatables },
       { type: "potato", count: props.potato },
       { type: "cassava", count: props.cassava },
-      { type: "maize(corn)", count: props.maize },
-      { type: "wheat", count: props.wheat },
+      { type: "maize", count: props.maize },
       { type: "rice", count: props.rice },
+      { type: "wheat", count: props.wheat },
       { type: "fruits", count: props.fruits },
       { type: "milk", count: props.milk },
       { type: "bananas", count: props.bananas },
@@ -343,16 +332,15 @@ map.on("load", () => {
       { type: "vegatables", perc: props.vegatables },
       { type: "potato", perc: props.potato },
       { type: "cassava", perc: props.cassava },
-      { type: "maize(corn)", perc: props.maize },
-      { type: "wheat", perc: props.wheat },
+      { type: "maize", perc: props.maize },
       { type: "rice", perc: props.rice },
+      { type: "wheat", perc: props.wheat },
       { type: "fruits", perc: props.fruits },
       { type: "milk", perc: props.milk },
       { type: "bananas", perc: props.bananas },
       { type: "tomatoes", perc: props.tomatoes },
       {
-        type:
-          "others (Plantains,Barley, Pineapples, Coconuts, Sweet potatoes, Sugar beet, Oranges, Yams, Onions)",
+        type: "others",
         perc: props.others,
       },
     ];
